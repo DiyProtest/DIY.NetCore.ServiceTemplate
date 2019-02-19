@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
+using Swashbuckle.AspNetCore.Annotations;
 
 namespace DIY.NetCore.ServiceTemplate.Controllers
 {
@@ -12,6 +13,8 @@ namespace DIY.NetCore.ServiceTemplate.Controllers
     {
         // GET api/values
         [HttpGet("stringvalues")]
+        [SwaggerOperation("returns an array of strings","description")]
+        [SwaggerResponse(200,type: typeof(IEnumerable<string>))]
         public ActionResult<IEnumerable<string>> GetValues()
         {
             return new string[] { "value1", "value2", "Value3", "Value4" };
