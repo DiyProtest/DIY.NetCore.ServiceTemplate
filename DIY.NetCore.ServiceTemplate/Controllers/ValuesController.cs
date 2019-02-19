@@ -7,7 +7,7 @@ using Swashbuckle.AspNetCore.Annotations;
 
 namespace DIY.NetCore.ServiceTemplate.Controllers
 {
-    [Route("api/[controller]")]
+    [Route("tests/api/[controller]")]
     [ApiController]
     public class ValuesController : ControllerBase
     {
@@ -24,7 +24,7 @@ namespace DIY.NetCore.ServiceTemplate.Controllers
         [HttpGet("{id}")]
         public ActionResult<string> Get(int id)
         {
-            return "value";
+            return $"{id}";
         }
 
         // POST api/values
