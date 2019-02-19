@@ -12,9 +12,9 @@ namespace DIY.NetCore.ServiceTemplate.Controllers
     {
         // GET api/values
         [HttpGet("stringvalues")]
-        public ActionResult<IEnumerable<string>> Get()
+        public ActionResult<IEnumerable<string>> GetValues()
         {
-            return new string[] { "value1", "value2", "Value3" };
+            return new string[] { "value1", "value2", "Value3", "Value4" };
         }
 
         // GET api/values/5
